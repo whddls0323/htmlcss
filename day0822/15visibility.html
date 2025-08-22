@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15visibility.html</title>
+    <style>
+        .tooltip {
+            cursor: pointer;
+        }
+        .tooltip:hover .tooltip-content{
+            visibility:visible;
+            font-weight: bold;
+        }
+        .tooltip-content {
+            background-color: goldenrod;
+            width: 400px;
+            padding: 10px;
+            margin: 10px 0px;
+            color: aliceblue;
+            text-align: center;
+            visibility: hidden;
+            /* display: none; 권장x */
+        }
+        span {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h3>툴팁효과 visibility속성</h3>
+    <p>
+        visibility 속성은 화면에서 감추기만 할 뿐 <br>
+        원래 요소가 있는 공간은 그대로 차지하지만, <br>
+        display:none; 은 아예 공간조차 차지하지 않습니다.
+    </p>
+
+    <div class="tooltip">
+        <span>여기에 마우스를 올려 보세요.</span>
+        <div class="tooltip-content">
+            <p>주말공지사항입니다. 조별스터디 시작</p>
+        </div>
+    </div>
+</body>
+</html>
+<!--
+    요소 바깥쪽 여백: margin
+    <form> 대상에서 label, 컨트롤 연결?
+    z-index 동작시 필요한 조건: 요소가 position(relative,absolute)
+    position 기본 속성: static
+    <html> 인코딩: <meta charset='UTF-8'>
+-->
