@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05position_sticky.html</title>
+    <style>
+        .box {
+            background-color: lightgray;
+            border: 1px solid black;
+            height: 100px;
+            line-height: 100px;
+            margin-bottom: 3px;
+            text-align: center;
+            width: 120px; 
+        }
+        .scroll-container {
+            height: 250px;
+            border: 2px solid blue;
+            overflow-y: auto;
+        }
+        .sticky-box {
+            background-color: pink;
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h2>05position_sticky.html</h2>
+    <div class="scroll-container">
+        <div class="box">첫번째 요소</div>
+        <div class="box sticky-box">두번째 요소</div>
+        <!-- sticky = relative + fixed 결합-->
+        <div class="box">세번째 요소</div>
+        <div class="box">네번째 요소</div>
+        <div class="box">다섯번째 요소</div>
+    </div>
+</body>
+</html>

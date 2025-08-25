@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02position_relative.html</title>
+    <style>
+        .container {
+            border: 1px solid tomato;
+            width: 300px;
+            height: 312px;
+        }
+        .box {
+            background-color: lightgray;
+            border: 1px solid black;
+            height: 100px;
+            line-height: 100px;
+            margin-bottom: 3px;
+            text-align: center;
+            width: 120px; 
+        }
+        .static-box {
+            background-color: cyan;
+            position: static;
+        }
+        .relative-box {
+            background-color: yellow;
+            position: relative; /*relative는 배치 top,bottom,left,right 사용가능 다른요소에 영향x, 본인 고유의 영역 유지*/
+            top: 5px;
+            left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2>02position_relative.html</h2>
+    <div class="container">
+        <div class="box">첫번째 요소</div>
+        <!-- <div class="box">두번째 요소</div> position 적용 x -->
+        <!-- <div class="box">두번째 요소</div> position기본값 sttaic -->
+        <div class="box relative-box">두번째 요소</div>
+        <div class="box">세번째 요소</div>
+    </div>
+</body>
+</html>
